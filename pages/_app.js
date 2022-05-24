@@ -5,8 +5,6 @@ import {
   configureChains,
   getDefaultWallets,
   RainbowKitProvider,
-  darkTheme,
-  midnightTheme,
 } from "@rainbow-me/rainbowkit";
 import { chain, createClient, WagmiConfig } from "wagmi";
 
@@ -35,7 +33,7 @@ const wagmiClient = createClient({
 function MyApp({ Component, pageProps }) {
   return (
     <WagmiConfig client={wagmiClient}>
-      <RainbowKitProvider chains={chains} theme={midnightTheme()}>
+      <RainbowKitProvider chains={chains}>
         <Component {...pageProps} />
       </RainbowKitProvider>
     </WagmiConfig>
